@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: #282b28;
+  background-color: #242626;
   opacity: 0;
   transition: opacity 1.2s;
 }
@@ -37,7 +37,7 @@ nav a:visited {
 }
 
 nav a:hover {
-  color: #ff5e19;
+  color: #5eeab0;
   cursor: pointer;
 }
 
@@ -65,22 +65,7 @@ nav a:hover {
   max-width: 80%;
 }
 
-.arrow-container {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  justify-content: flex-end;
-  top: 3.2%;
-  right: 4%;
-}
 
-.arrow {
-  border-right: 5px solid #ff5e19;
-  border-bottom: 5px solid #ff5e19;
-  height: 20px;
-  width: 20px;
-  transform: rotate(45deg);
-}
 
 #intro {
   display: inline-block;
@@ -105,37 +90,36 @@ nav a:hover {
 
 #front-end {
   font-family: "Courier New", Courier, monospace;
-  color: #ff5e19;
+  color: #5eeab0;
   font-size: 1.1rem;
   padding-top: 0.1rem;
   font-weight: bold;
-  animation: colorshift 4.2s ease-in-out infinite;
 }
 
 .about h2,
 .projects h2 {
   font-family: "Tektur", tahoma, sans-serif;
   letter-spacing: 0.1rem;
-  color: #ff5e19;
+  color: #5eeab0;
   margin: 2rem 0 1rem 0;
   text-transform: uppercase;
 }
 
 .about a {
   font-family: "Courier New", Courier, monospace;
-  color: #ff5e19;
+  color: #5eeab0;
   font-weight: bold;
   text-decoration: none;
   font-size: 1.3rem;
-  border: 2px solid #ff5e19;
+  border: 2px solid #5eeab0;
   border-radius: 60px;
   padding: 0.5rem 1rem 0.5rem 1rem;
   transition: all 0.15s ease;
 }
 
 .about a:visited {
-  color: #ff5e19;
-  border-color: #ff5e19;
+  color: #5eeab0;
+  border-color: #5eeab0;
 }
 
 .about a:hover {
@@ -150,13 +134,7 @@ p {
   line-height: 2rem;
 }
 
-.about p {
-  transition: all 0.15s ease;
-}
 
-.about p:hover {
-  color: #ff5e19;
-}
 
 .skills h2 {
   text-align: center;
@@ -190,11 +168,11 @@ p {
 }
 
 .card h4:hover {
-  color: #ff5e19;
+  color: #5eeab0;
 }
 
 .card:hover {
-  border-color: #ff5e19;
+  border-color: #5eeab0;
   cursor: pointer;
   transform: scale(1.02);
 }
@@ -213,10 +191,6 @@ h4 {
 }
 
 @media (max-width: 768px) {
-  .arrow-container {
-    top: 3%;
-    right: 4%;
-  }
 
   nav {
     font-size: 1.5rem;
@@ -235,10 +209,6 @@ h4 {
 }
 
 @media (max-width: 425px) {
-  .arrow-container {
-    top: 4%;
-    right: 6%;
-  }
 
   .hero,
   .about,
@@ -252,8 +222,7 @@ h4 {
   }
 
   #front-end {
-    font-family: "Courier New", Courier, monospace;
-    color: #ff5e19;
+    
     font-size: 1rem;
   }
 
@@ -295,32 +264,12 @@ h4 {
     font-size: 1rem;
   }
 
-  .arrow-container {
-    top: 4%;
-    right: 8%;
-  }
-
-  .arrow {
-    border-right: 5px solid #ff5e19;
-    border-bottom: 5px solid #ff5e19;
-    height: 16px;
-    width: 16px;
-  }
+ 
 }
 
 @media (max-width: 320px) {
-  .arrow-container {
-    top: 4%;
-    right: 9%;
-  }
 
-  .arrow {
-    border-right: 5px solid #ff5e19;
-    border-bottom: 5px solid #ff5e19;
-    height: 15px;
-    width: 15px;
-  }
-
+ 
   #name {
     font-size: 1.3rem;
   }
@@ -445,16 +394,3 @@ h4 {
   }
 }
 
-@keyframes colorshift {
-  0% {
-    color: #ff5e19;
-  }
-
-  50% {
-    color: #fefae0;
-  }
-
-  100% {
-    color: #ff5e19;
-  }
-}
