@@ -1,120 +1,136 @@
 <!DOCTYPE html>
 <html lang="en" id="home">
   <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <link rel="stylesheet" href="styles.css" >
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
     <title>Jacob Roberts | Developer</title>
-    <link rel="icon" type="image/x-icon" href="images/icon.ico">
-   
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Tektur&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/icon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tektur&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
-
-  <body onload="document.body.style.opacity='1'">
-   
-  
-    <header>
-    
-        <nav>
-          <ul>
-            <li><a href="#top">.01</a></li>
-            <li><a href="#about">.02</a></li>
-            <li><a href="#projects">.03</a></li>
-
-
-          </ul>
-          
-          
-        </nav>
-
-    </header>
-
-
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#hero" id="home-link">Home</a></li>
+        <li><a href="#about" id="about-link">About</a></li>
+        <li><a href="#projects" id="projects-link">Projects</a></li>
+      </ul>
+    </nav>
 
     <main>
-
-      <section class="container" >
-<div class="arrow-container">
-            <div class="arrow"> </div>
-            <div class="arrow"> </div>
-            <div class="arrow"> </div>
-          </div>
-
-
-
-        <div class="slides">
-
-          <div class="hero">
-
-           
-            
-            <div id="intro">
+      <div class="slides">
+        <div class="hero">
+          <div id="intro">
             <h1 id="name">Jacob Roberts</h1>
-            <p id="front-end"><span class="slash">/// </span>Front-End Developer</p>
-            </div>
-            
+            <p id="front-end">
+              <span id="front-end-text" class=""
+                ><span class="slash">/// </span>Front-End Developer</span
+              ><span id="email-text" class="hidden"
+                >jacobaroberts1993@gmail.com</span
+              ><span class="blink">|</span>
+            </p>
           </div>
-          
-          <div class="about" id="about">
+          <div class="hero-links">
+            <a href="https://github.com/jacobaroberts1993" target="_blank"
+              >GitHub</a
+            >
+            <a
+              href="https://www.linkedin.com/in/jacob-roberts-0a58b529a/"
+              target="_blank"
+              >LinkedIn</a
+            >
+            <a href="javascript:;" class="email-address-link">Email</a>
+            <a href="#">Resume</a>
+          </div>
+        </div>
 
-            <h2>About</h2>
-            <p>Hello, my name is Jacob. BIO BIO BIO BIO BIO BIO BIO BIO BIO.
-              After three years building and operating an e-commerce brand, I sold the business to pursue a career in front-end development. I love to design, build, and balance form with function. Thank you for stopping by.
-            <br>
-            <br><a href="#">/// View my resume</a>   </p>
+        <div class="about hidden" id="about">
+          <h2>About</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quod
+            voluptatem voluptates, atque repudiandae molestias ducimus, sit
+            perspiciatis id at voluptas ea dolorem illo assumenda quidem
+            laudantium libero, iste accusantium?
+          </p>
 
-            
-            <div class="skills">
-              <h2>Tools</h2>
-           
-            
+          <div class="skills">
+            <h2>Tools</h2>
+
             <div class="skill-icons">
-
-              
               <i class="devicon-css3-plain"></i>
               <i class="devicon-html5-plain"></i>
               <i class="devicon-javascript-plain"></i>
               <i class="devicon-github-original"></i>
               <i class="devicon-photoshop-line"></i>
               <i class="devicon-illustrator-line"></i>
-
-
             </div>
           </div>
-          </div>
-
-          <div class="projects" id="projects">
-
-            <h2>Projects</h2>
-
-            <div class="project-cards">
-              <div class="card">
-                <h4>///01</h4>
-                <p>Here is some info about this project.</p>
-              </div>
-              <div class="card">
-                <h4>///02</h4>
-                <p>Here is some info about this project.</p>
-              </div>
-              <div class="card">
-                <h4>///03</h4>
-                <p>Here is some info about this project.</p>
-              </div>
-            </div>
-
-          </div>
-
         </div>
 
-      </section>
+        <div class="projects hidden" id="projects">
+          <h2>Projects</h2>
 
+          <div class="project-cards">
+            <div class="card">
+              <h4>///01</h4>
+              <p>Here is some info about this project.</p>
+            </div>
+            <div class="card">
+              <h4>///02</h4>
+              <p>Here is some info about this project.</p>
+            </div>
+            <div class="card">
+              <h4>///03</h4>
+              <p>Here is some info about this project.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
-    </body>
-</html>
+    <code class="one">
+      function showSlide(slideToShow) { heroSlide.classList.add("hidden");
+      projectsSlide.classList.add("hidden"); aboutSlide.classList.add("hidden");
+      setTimeout(() => { slideToShow.classList.remove("hidden"); }, 125); }
+    </code>
 
-     
+    <code class="two">
+      const homeLink = document.querySelector("#home-link"); const aboutLink =
+      document.querySelector("#about-link"); const projectsLink =
+      document.querySelector("#projects-link"); const projectsSlide =
+      document.querySelector(".projects"); const heroSlide =
+      document.querySelector(".hero"); const aboutSlide =
+      document.querySelector(".about");
+    </code>
+    <code class="three">
+      homeLink.addEventListener("click", function () { showSlide(heroSlide); });
+      aboutLink.addEventListener("click", function () { showSlide(aboutSlide);
+      }); projectsLink.addEventListener("click", function () {
+      showSlide(projectsSlide); });
+    </code>
+    <code class="four">
+      .about a:visited { color: #5eeab0; border-color: #5eeab0; } .about a:hover
+      { color: #fefae0; border-color: #fefae0; } .card:hover { border-color:
+      #5eeab0; cursor: pointer; transform: scale(1.02); color: #5eeab0; } .about
+      h2, .projects h2 { font-family: "Tektur", tahoma, sans-serif;
+      letter-spacing: 0.1rem; color: #5eeab0; margin: 0 0 1rem 0;
+      text-transform: uppercase; text-align: center; } .about a { font-family:
+      "Courier New", Courier, monospace; color: #5eeab0; font-weight: bold;
+      text-decoration: none; font-size: 1.3rem; border: 2px solid #5eeab0;
+      border-radius: 60px; padding: 1rem; transition: all 0.15s ease;
+    </code>
+
+    <script src="script.js"></script>
+  </body>
+</html>
