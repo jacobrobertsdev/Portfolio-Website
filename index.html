@@ -31,9 +31,9 @@
     <main>
       <div class="slides">
         <div class="hero">
-          <div id="intro">
-            <h1 id="name">Jacob Roberts</h1>
-            <p id="front-end">
+          <div class="intro">
+            <h1 class="name">Jacob Roberts</h1>
+            <p class="front-end">
               <span id="front-end-text" class=""
                 ><span class="slash">/// </span>Front-End Developer</span
               ><span id="email-text" class="hidden"
@@ -58,10 +58,13 @@
         <div class="about hidden" id="about">
           <h2>About</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quod
-            voluptatem voluptates, atque repudiandae molestias ducimus, sit
-            perspiciatis id at voluptas ea dolorem illo assumenda quidem
-            laudantium libero, iste accusantium?
+            Hi, I'm Jacob 👋. I'm a front-end developer based in Kentucky. In
+            Oct. 2023, I decided to sell my business and pursue a new field.
+            Shortly after, I began learning how to code, and haven't looked
+            back. I'm always looking to learn, grow, and improve. So far, much
+            of my time has been spent immersed in HTML, CSS, and Javascript.
+            Looking ahead, I'm excited to learn React, along with some back-end
+            technologies. Thanks for stopping by!
           </p>
 
           <div class="skills">
@@ -88,16 +91,18 @@
               <button class="third-project">03</button>
             </div>
             <div class="card card-one">
-              <h4>///01</h4>
-              <img
-                src="images/Portfolio Site Card.png"
-                alt="portfolio example"
-                class="portfolio-site"
-              />
+              <h4>///01 - Theme Changer</h4>
+
+              <div class="theme-buttons">
+                <button class="theme-one">Main</button>
+                <button class="theme-two">Lite</button>
+                <button class="theme-three">Moon</button>
+              </div>
               <p>Here is some info about this project.</p>
             </div>
             <div class="card card-two hidden">
               <h4>///02</h4>
+
               <img
                 src="images/Portfolio Site Card.png"
                 alt="portfolio example"
@@ -107,6 +112,7 @@
             </div>
             <div class="card card-three hidden">
               <h4>///03 - Portfolio V1</h4>
+
               <img
                 src="images/Portfolio Site Card.png"
                 alt="portfolio example"
@@ -119,13 +125,13 @@
       </div>
     </main>
 
-    <code class="one">
+    <code class="one" aria-hidden="true">
       function showSlide(slideToShow) { heroSlide.classList.add("hidden");
       projectsSlide.classList.add("hidden"); aboutSlide.classList.add("hidden");
       setTimeout(() => { slideToShow.classList.remove("hidden"); }, 125); }
     </code>
 
-    <code class="two">
+    <code class="two" aria-hidden="true">
       const homeLink = document.querySelector("#home-link"); const aboutLink =
       document.querySelector("#about-link"); const projectsLink =
       document.querySelector("#projects-link"); const projectsSlide =
@@ -133,13 +139,13 @@
       document.querySelector(".hero"); const aboutSlide =
       document.querySelector(".about");
     </code>
-    <code class="three">
+    <code class="three" aria-hidden="true">
       homeLink.addEventListener("click", function () { showSlide(heroSlide); });
       aboutLink.addEventListener("click", function () { showSlide(aboutSlide);
       }); projectsLink.addEventListener("click", function () {
       showSlide(projectsSlide); });
     </code>
-    <code class="four">
+    <code class="four" aria-hidden="true">
       .about a:visited { color: #5eeab0; border-color: #5eeab0; } .about a:hover
       { color: #fefae0; border-color: #fefae0; } .card:hover { border-color:
       #5eeab0; cursor: pointer; transform: scale(1.02); color: #5eeab0; } .about

@@ -13,14 +13,16 @@ const projectButtonThree = document.querySelector(".third-project");
 const projectOne = document.querySelector(".card-one");
 const projectTwo = document.querySelector(".card-two");
 const projectThree = document.querySelector(".card-three");
+const themeOne = document.querySelector(".theme-one");
+const themeTwo = document.querySelector(".theme-two");
+const themeThree = document.querySelector(".theme-three");
+const root = document.documentElement;
 
 function showSlide(slideToShow) {
   heroSlide.classList.add("hidden");
   projectsSlide.classList.add("hidden");
   aboutSlide.classList.add("hidden");
-  setTimeout(() => {
-    slideToShow.classList.remove("hidden");
-  }, 100);
+  slideToShow.classList.remove("hidden");
 }
 
 homeLink.addEventListener("click", function () {
@@ -56,4 +58,22 @@ projectButtonTwo.addEventListener("click", function () {
 });
 projectButtonThree.addEventListener("click", function () {
   showProject(projectThree);
+});
+
+function setTheme(textColor, backgroundColor, primaryColor) {
+  root.style.setProperty("--text", textColor);
+  root.style.setProperty("--background", backgroundColor);
+  root.style.setProperty("--primary", primaryColor);
+}
+
+themeOne.addEventListener("click", function () {
+  setTheme("#f3f7f3", "#121c13", "#1ee6d5");
+});
+
+themeTwo.addEventListener("click", function () {
+  setTheme("#050605", "#EFF1EE", "#E4290C");
+});
+
+themeThree.addEventListener("click", function () {
+  setTheme("#FDFCFD", "#18101E", "#7C519E");
 });
