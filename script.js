@@ -17,6 +17,11 @@ const themeOne = document.querySelector(".theme-one");
 const themeTwo = document.querySelector(".theme-two");
 const themeThree = document.querySelector(".theme-three");
 const root = document.documentElement;
+const hamburgerIcon = document.querySelector(".bar-container");
+const mobileNavBackground = document.querySelector(
+  ".hamburger-menu-background"
+);
+const nav = document.querySelector("nav");
 
 function showSlide(slideToShow) {
   heroSlide.classList.add("hidden");
@@ -77,3 +82,13 @@ themeTwo.addEventListener("click", function () {
 themeThree.addEventListener("click", function () {
   setTheme("#FDFCFD", "#18101E", "#7C519E");
 });
+
+function displayItem(el) {
+  if (el.style.display === "none") {
+    el.style.display = "block";
+  } else if (el.style.display === "block") {
+    el.style.display = "none";
+  }
+}
+
+hamburgerIcon.addEventListener("click", displayItem(mobileNavBackground));

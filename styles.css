@@ -17,7 +17,7 @@ body {
   --primary: #1ee6d5;
   --secondary: #1c2b1d;
   --heading: "Tektur", tahoma, sans-serif;
-  --body: "Courier New", Courier, monospace, monospace;
+  --body: "Montserrat", sans-serif;
 }
 
 /* -----------NAVIGATION---------- */
@@ -36,13 +36,13 @@ nav ul {
 }
 
 nav a {
-  font-family: var(--body);
-  font-weight: bold;
+  font-family: var(--heading);
+  font-weight: 500;
   font-size: 1.5rem;
   color: var(--text);
   text-decoration: none;
   transition: all 0.15s ease;
-  margin: 1rem;
+  margin: 0.8rem;
   padding: 0.5rem;
 }
 
@@ -57,16 +57,17 @@ nav a {
 }
 
 .theme-buttons button {
-  padding: 0.75rem;
+  padding: 0.5rem 1rem;
   margin: 0.5rem;
+  max-width: 5rem;
   border: 2px solid var(--text);
   border-radius: 50px;
   transition: all 0.2s ease;
   background-color: transparent;
   color: var(--text);
   font-family: var(--body);
-  font-weight: bold;
-  font-size: 0.9rem;
+  font-weight: 500;
+  font-size: 0.8rem;
 }
 
 /* -----------SLIDES---------- */
@@ -89,6 +90,7 @@ nav a {
   align-items: center;
   max-width: 80%;
   animation: fade 0.5s ease 1;
+  overflow: auto;
 }
 
 /* -----------HERO SECTION---------- */
@@ -100,10 +102,11 @@ nav a {
 }
 code {
   position: fixed;
-  font-family: var(--body);
+  font-family: "Courier New", Courier, monospace;
   color: var(--primary);
   text-align: left;
   user-select: none;
+  font-weight: bold;
   z-index: -10;
 }
 .one {
@@ -136,11 +139,16 @@ code {
   line-height: 2;
 }
 .intro {
-  padding: 1.1rem;
-  border-bottom: 3px solid var(--text);
-  border-left: 3px solid var(--text);
+  padding: 1rem 0 1.2rem 1.2rem;
+  border-bottom: 4px solid var(--text);
+  border-left: 2px solid var(--text);
   transition: all 1s ease;
   line-height: 1;
+  border-bottom-left-radius: 12px;
+}
+
+.hero {
+  backdrop-filter: blur(1rem);
 }
 
 .hero-links {
@@ -151,7 +159,7 @@ code {
 .hero a {
   font-family: var(--body);
   color: var(--text);
-  font-weight: bold;
+  font-weight: 400;
   text-decoration: none;
   font-size: 1em;
   transition: all 0.2s ease;
@@ -168,9 +176,8 @@ code {
 }
 
 .front-end {
-  font-family: var(--body);
+  font-family: "Courier New", Courier, monospace;
   color: var(--primary);
-  padding-top: 0.1rem;
   font-weight: bold;
 }
 
@@ -187,15 +194,15 @@ code {
 }
 
 .about {
-  padding-top: 2rem;
+  backdrop-filter: blur(0.2rem);
 }
 
 .about p {
   font-family: var(--body);
-  font-weight: bold;
-  font-size: 1.3rem;
+  font-weight: 500;
+  font-size: 1.2rem;
   line-height: 1.4;
-  text-align: center;
+  text-align: left;
 }
 
 /* -----------HOVER & ACTIVE STATES---------- */
@@ -215,7 +222,6 @@ nav a:hover {
 
 .hero a:hover {
   color: var(--primary);
-  text-decoration: underline;
 }
 .hero a:focus {
   color: var(--primary);
@@ -258,7 +264,7 @@ i:hover {
 
 .skills h2 {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -284,8 +290,10 @@ i {
 }
 
 .project-buttons button {
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 3rem;
+  height: 3rem;
   padding: 0.75rem;
   margin: 0.25rem;
   color: var(--text);
@@ -320,6 +328,7 @@ i {
   transition: all 0.2s ease;
   animation: fade 1s ease 1;
   border-radius: 1rem;
+  backdrop-filter: blur(0.2rem);
 }
 
 h4 {
@@ -331,7 +340,7 @@ h4 {
   font-family: var(--body);
   font-size: 1rem;
   line-height: 1.3rem;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 /* -----------HIDDEN CLASS---------- */
@@ -388,11 +397,42 @@ h4 {
   }
 }
 
-@media (max-width: 505px) {
-  .intro {
-    width: min-content;
+@media (max-width: 768px) and (orientation: landscape) {
+  .theme-buttons {
+    display: none;
   }
 
+  .about p {
+    text-align: center;
+    max-width: 95%;
+    font-size: 0.8rem;
+  }
+
+  nav a {
+    font-size: 0.8rem;
+    margin: 0.2rem;
+  }
+
+  .about h2,
+  .projects h2 {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .skill-icons {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 500px) {
+  nav a {
+    font-size: 0.8rem;
+    margin: 0.2rem;
+  }
+  .intro {
+    max-width: min-content;
+  }
   .slash {
     display: none;
   }
@@ -400,20 +440,29 @@ h4 {
   .skill-icons {
     font-size: 2rem;
   }
+
+  .about p {
+    text-align: center;
+    max-width: 95%;
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 375px) {
-  nav ul {
-    flex-direction: column;
-    align-items: flex-start;
+  .theme-buttons {
+    display: none;
   }
 
   .project-cards p {
     font-size: 0.5rem;
   }
 
+  h2 {
+    font-size: 1.2rem;
+  }
+
   h4 {
-    font-size: 0.7rem;
+    font-size: 0.5rem;
   }
 
   .hero-links {
