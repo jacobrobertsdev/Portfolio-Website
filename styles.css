@@ -306,7 +306,7 @@ i {
   font-weight: 500;
   background: transparent;
   border-radius: 1000px;
-  transition: all 0.2s ease;
+  transition: all 0.1s ease;
 }
 
 .projects {
@@ -323,11 +323,11 @@ i {
 }
 
 .card img {
-  max-width: 100%;
+  max-width: 90%;
+  padding: 1rem;
   margin: 0 auto;
-  border-top: 1px solid var(--text);
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-radius: 20px;
+  transition: opacity 0.1s ease;
 }
 
 .card {
@@ -337,14 +337,14 @@ i {
   justify-content: center;
   align-items: center;
   text-align: center;
-  border: 1.5px solid var(--text);
+  border: 2px solid var(--text);
 
-  transition: all 0.2s ease;
+  transition: all 0.1s ease;
   animation: fade 1s ease 1;
   font-size: 1rem;
   background-color: var(--background);
   backdrop-filter: blur(0.5rem);
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 .project-info {
@@ -353,7 +353,8 @@ i {
   justify-content: space-between;
   align-items: flex-end;
   text-align: left;
-  margin: 0.75rem 0;
+  padding: 0.75rem 0.2rem;
+  border-bottom: 1px solid var(--text);
 }
 .card a {
   color: var(--primary);
