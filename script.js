@@ -70,7 +70,7 @@ function setTheme(textColor, backgroundColor, primaryColor) {
 }
 
 themeOne.addEventListener("click", function () {
-  setTheme("#f3f7f3", "#121c13", "#1ee6d5");
+  setTheme("#f3f7f3", "#112A42", "#1ee6d5");
 });
 
 themeTwo.addEventListener("click", function () {
