@@ -18,9 +18,7 @@ const themeTwo = document.querySelector(".theme-two");
 const themeThree = document.querySelector(".theme-three");
 const root = document.documentElement;
 const hamburgerIcon = document.querySelector(".bar-container");
-const mobileNavBackground = document.querySelector(
-  ".hamburger-menu-background"
-);
+
 const nav = document.querySelector("nav");
 
 function showSlide(slideToShow) {
@@ -83,12 +81,43 @@ themeThree.addEventListener("click", function () {
   setTheme("#FDFCFD", "#18101E", "#7C519E");
 });
 
-function displayItem(el) {
-  if (el.style.display === "none") {
-    el.style.display = "block";
-  } else if (el.style.display === "block") {
-    el.style.display = "none";
-  }
+function showDescription(num, func) {
+  document
+    .querySelector(`.description-link--${num}`)
+    .addEventListener("click", () => {
+      document.querySelector(`.description--${num}`).classList.toggle("hidden");
+      document.querySelector(".close-button").classList.toggle("hidden");
+    });
 }
 
-hamburgerIcon.addEventListener("click", displayItem(mobileNavBackground));
+function close(num) {
+  document
+    .querySelector(".close-button-link")
+    .addEventListener("click", (event) => {
+      document.querySelector(`.description--${num}`).classList.add("hidden");
+      document.querySelector(".close-button").classList.add("hidden");
+      event.preventDefault();
+    });
+  document
+    .querySelector(".close-button-link")
+    .addEventListener("keydown", () => {
+      document.querySelector(`.description--${num}`).classList.add("hidden");
+      document.querySelector(".close-button").classList.add("hidden");
+    });
+  document
+    .querySelector(`.description--${num}`)
+    .addEventListener("click", () => {
+      document.querySelector(`.description--${num}`).classList.add("hidden");
+      document.querySelector(".close-button").classList.add("hidden");
+    });
+  document
+    .querySelector(`.description--${num}`)
+    .addEventListener("keydown", () => {
+      document.querySelector(`.description--${num}`).classList.add("hidden");
+      document.querySelector(".close-button").classList.add("hidden");
+    });
+}
+
+showDescription(1, close(1));
+showDescription(2, close(2));
+showDescription(3, close(3));
