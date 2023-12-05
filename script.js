@@ -100,22 +100,15 @@ function close(num) {
     });
   document
     .querySelector(".close-button-link")
-    .addEventListener("keydown", () => {
+    .addEventListener("keypress", () => {
       document.querySelector(`.description--${num}`).classList.add("hidden");
       document.querySelector(".close-button").classList.add("hidden");
     });
-  document
-    .querySelector(`.description--${num}`)
-    .addEventListener("click", () => {
-      document.querySelector(`.description--${num}`).classList.add("hidden");
-      document.querySelector(".close-button").classList.add("hidden");
-    });
-  document
-    .querySelector(`.description--${num}`)
-    .addEventListener("keydown", () => {
-      document.querySelector(`.description--${num}`).classList.add("hidden");
-      document.querySelector(".close-button").classList.add("hidden");
-    });
+
+  document.addEventListener("keypress", () => {
+    document.querySelector(`.description--${num}`).classList.add("hidden");
+    document.querySelector(".close-button").classList.add("hidden");
+  });
 }
 
 showDescription(1, close(1));
