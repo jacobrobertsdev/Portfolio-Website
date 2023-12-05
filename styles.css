@@ -30,7 +30,7 @@ body {
   border-radius: 9999px;
   opacity: 0.85;
   background: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
-  z-index: -1;
+  z-index: 0;
   animation: move 70s linear infinite;
 }
 .circle-2 {
@@ -42,7 +42,7 @@ body {
   border-radius: 9999px;
   opacity: 0.6;
   background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
-  z-index: -1;
+  z-index: 0;
   animation: move 55s linear infinite;
 }
 .circle-3 {
@@ -54,7 +54,7 @@ body {
   border-radius: 9999px;
   opacity: 0.75;
   background: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
-  z-index: -1;
+  z-index: 0;
   animation: move 45s linear infinite;
 }
 
@@ -71,6 +71,7 @@ nav ul {
   align-items: center;
   max-width: 100%;
   margin: 1.2rem 1.2rem;
+  z-index: 3;
 }
 
 nav a {
@@ -93,6 +94,7 @@ nav a {
   color: var(--text);
   text-align: center;
   align-self: flex-start;
+  z-index: 3;
 }
 
 .theme-buttons button {
@@ -129,6 +131,7 @@ nav a {
   max-width: 80%;
   animation: fade 0.5s ease 1;
   height: 100vh;
+  z-index: 2;
 }
 
 /* -----------HERO SECTION---------- */
