@@ -153,7 +153,6 @@ nav a {
 .hero-links {
   display: flex;
   align-self: flex-start;
-  padding-top: 0.5rem;
 }
 
 .hero a {
@@ -179,6 +178,7 @@ nav a {
   color: var(--primary);
   font-weight: bold;
   font-size: 1.7rem;
+  padding-bottom: 0.1rem;
 }
 
 /* -----------ABOUT SECTION---------- */
