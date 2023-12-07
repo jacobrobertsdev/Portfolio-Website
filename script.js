@@ -19,8 +19,6 @@ const themeThree = document.querySelector(".theme-three");
 const root = document.documentElement;
 const hamburgerIcon = document.querySelector(".bar-container");
 
-const nav = document.querySelector("nav");
-
 function showSlide(slideToShow) {
   heroSlide.classList.add("hidden");
   projectsSlide.classList.add("hidden");
@@ -114,3 +112,38 @@ function close(num) {
 showDescription(1, close(1));
 showDescription(2, close(2));
 showDescription(3, close(3));
+
+function navigateToHash() {
+  const hash = window.location.hash.substring(1);
+
+  if (hash === "about") {
+    showSlide(aboutSlide);
+  } else if (hash === "projects") {
+    showSlide(projectsSlide);
+  } else {
+    // Add more conditions for other sections/pages
+    showSlide(heroSlide);
+  }
+}
+
+// Event listeners for navigation links
+homeLink.addEventListener("click", function () {
+  showSlide(heroSlide);
+  history.pushState(null, null, "#home");
+});
+
+aboutLink.addEventListener("click", function () {
+  showSlide(aboutSlide);
+  history.pushState(null, null, "#about");
+});
+
+projectsLink.addEventListener("click", function () {
+  showSlide(projectsSlide);
+  history.pushState(null, null, "#projects");
+});
+
+// Event listener for popstate to handle back/forward buttons
+window.addEventListener("popstate", function (event) {
+  navigateToHash();
+});
+navigateToHash();
