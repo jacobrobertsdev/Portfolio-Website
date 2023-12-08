@@ -265,6 +265,10 @@ i:hover {
   color: var(--text);
 }
 
+.descriptions a:hover {
+  color: var(--text);
+}
+
 /* -----------SKILL ICONS---------- */
 
 .skills h2 {
@@ -382,9 +386,7 @@ i {
   background-color: var(--background);
   z-index: 1000;
 }
-.description--1 p,
-.description--2 p,
-.description--3 p {
+.descriptions p {
   font-family: var(--body);
   font-weight: 500;
   color: var(--text);
@@ -392,13 +394,16 @@ i {
   text-align: center;
   line-height: 2;
 }
-.description--1 h3,
-.description--2 h3,
-.description--3 h3 {
+.descriptions h3 {
   font-family: var(--heading);
   color: var(--text);
   text-align: center;
   font-weight: 700;
+  padding: 1rem;
+}
+
+.descriptions a {
+  color: var(--primary);
 }
 
 .close-button a {
