@@ -281,15 +281,6 @@ i {
   transition: all 0.2s ease;
 }
 
-.skill-icons {
-  display: flex;
-  flex-direction: row;
-  font-size: 2.7rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.6rem;
-}
-
 /* -----------PROJECTS SECTION---------- */
 
 .project-buttons {
@@ -480,7 +471,7 @@ i {
     border-radius: 12px;
   }
 }
-
+/* 
 @media (max-width: 800px) and (orientation: landscape) {
   .about p {
     text-align: center;
@@ -499,11 +490,7 @@ i {
     margin-top: 0.5rem;
     margin-bottom: 0.25rem;
   }
-
-  .skill-icons {
-    font-size: 1.4rem;
-  }
-}
+} */
 
 @media (max-width: 500px) {
   .circle-1,
@@ -521,10 +508,6 @@ i {
   }
   .slash {
     display: none;
-  }
-
-  .skill-icons {
-    font-size: 2rem;
   }
 
   .about p {
