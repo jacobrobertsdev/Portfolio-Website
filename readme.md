@@ -4,7 +4,7 @@ The first version of my portfolio website. The site functions as a single-page a
 
 🔗 **Live site:** [here](https://jacobrobertsdev.github.io/portfolio-website/)
 
-<img src="Images/portfolio-screenshot.png" width="600px" alt="Screenshot">
+<img src="images/portfolio-screenshot.png" width="600px" alt="Screenshot">
 
 ## Built Using
 
