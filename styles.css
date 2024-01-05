@@ -319,7 +319,8 @@ i {
 }
 
 .card img {
-  max-width: 90%;
+  object-fit: cover;
+  max-width: 85%;
   padding: 1rem;
   margin: 0 auto;
   border-radius: 20px;
@@ -513,7 +514,7 @@ i {
   .about p {
     text-align: center;
     max-width: 95%;
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .front-end {
@@ -528,6 +529,10 @@ i {
 }
 
 @media (max-width: 375px) {
+  .slashes {
+    display: none;
+  }
+
   .project-cards p {
     font-size: 0.5rem;
   }
@@ -536,8 +541,8 @@ i {
     font-size: 1.2rem;
   }
 
-  h4 {
-    font-size: 0.5rem;
+  .project-cards h4 {
+    font-size: 0.8rem;
   }
 
   .hero-links {
