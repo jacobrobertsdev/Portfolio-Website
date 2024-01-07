@@ -386,13 +386,6 @@ i {
   text-align: center;
   line-height: 2;
 }
-.descriptions h3 {
-  font-family: var(--heading);
-  color: var(--text);
-  text-align: center;
-  font-weight: 700;
-  padding: 1rem;
-}
 
 .descriptions a {
   color: var(--primary);
