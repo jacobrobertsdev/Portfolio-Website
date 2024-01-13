@@ -2,7 +2,7 @@
 
 The first version of my portfolio website. The site functions as a single-page application with dynamically-loaded content, animations, and three different theme options.
 
-🔗 **Live site:** [here](https://jacobrobertsdev.github.io/portfolio-website/)
+🔗 **Live site:** [here](https://jacobroberts.dev)
 
 <img src="images/portfolio-screenshot.png" width="600px" alt="Screenshot">
 
