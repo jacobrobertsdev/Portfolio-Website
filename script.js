@@ -17,8 +17,8 @@ const themeOne = document.querySelector(".theme-one");
 const themeTwo = document.querySelector(".theme-two");
 const themeThree = document.querySelector(".theme-three");
 const root = document.documentElement;
-const hamburgerIcon = document.querySelector(".bar-container");
 
+//---Pages---//
 function showSlide(slideToShow) {
   heroSlide.classList.add("hidden");
   projectsSlide.classList.add("hidden");
@@ -43,6 +43,7 @@ emailLink.addEventListener("click", function () {
   email.classList.toggle("hidden");
 });
 
+//---Projects---//
 function showProject(projectToShow) {
   projectOne.classList.add("hidden");
   projectTwo.classList.add("hidden");
@@ -61,6 +62,7 @@ projectButtonThree.addEventListener("click", function () {
   showProject(projectThree);
 });
 
+//---Themes---//
 function setTheme(textColor, backgroundColor, primaryColor) {
   root.style.setProperty("--text", textColor);
   root.style.setProperty("--background", backgroundColor);
@@ -79,6 +81,7 @@ themeThree.addEventListener("click", function () {
   setTheme("#FDFCFD", "#18101E", "#7C519E");
 });
 
+//---Project Descriptions---//
 function showDescription(num, func) {
   document
     .querySelector(`.description-link--${num}`)
@@ -96,6 +99,7 @@ function close(num) {
       document.querySelector(".close-button").classList.add("hidden");
       event.preventDefault();
     });
+
   document
     .querySelector(".close-button-link")
     .addEventListener("keypress", () => {
@@ -113,6 +117,7 @@ showDescription(1, close(1));
 showDescription(2, close(2));
 showDescription(3, close(3));
 
+//---Navigation / Routing---//
 function navigateToHash() {
   const hash = window.location.hash.substring(1);
 
@@ -125,8 +130,8 @@ function navigateToHash() {
     showSlide(heroSlide);
   }
 }
+navigateToHash();
 
-// Event listeners for navigation links
 homeLink.addEventListener("click", function () {
   showSlide(heroSlide);
   history.pushState(null, null, "#home");
@@ -146,4 +151,3 @@ projectsLink.addEventListener("click", function () {
 window.addEventListener("popstate", function (event) {
   navigateToHash();
 });
-navigateToHash();
