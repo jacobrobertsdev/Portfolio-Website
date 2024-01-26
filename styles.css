@@ -199,7 +199,7 @@ nav a {
   font-weight: 500;
   font-size: 1.2rem;
   line-height: 1.4;
-  text-align: center;
+  text-align: justify;
 }
 
 /* -----------HOVER & ACTIVE STATES---------- */
@@ -320,7 +320,7 @@ i {
 
 .card img {
   object-fit: cover;
-  max-width: 85%;
+  max-width: 95%;
   padding: 1rem;
   margin: 0 auto;
   border-radius: 20px;
@@ -328,7 +328,7 @@ i {
 }
 
 .card {
-  max-width: 70%;
+  max-width: 75%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -348,7 +348,7 @@ i {
   width: 95%;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   padding: 0.75rem 0.2rem;
   border-bottom: 1px solid var(--text);
 }
@@ -446,11 +446,9 @@ i {
     font-size: 4.2rem;
   }
 }
+
 @media (max-width: 800px) {
   .project-info {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
     max-width: 100%;
     font-size: 0.9rem;
   }
@@ -505,7 +503,6 @@ i {
   }
 
   .about p {
-    text-align: center;
     max-width: 95%;
     font-size: 0.9rem;
   }
@@ -519,9 +516,13 @@ i {
   .projects {
     padding-bottom: 6rem;
   }
+
+  .projects {
+    max-width: 80%;
+  }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 425px) {
   .slashes {
     display: none;
   }
