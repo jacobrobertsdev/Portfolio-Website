@@ -33,6 +33,7 @@ body {
   z-index: 0;
   animation: move 70s linear infinite;
 }
+
 .circle-2 {
   position: fixed;
   top: 60%;
@@ -45,6 +46,7 @@ body {
   z-index: 0;
   animation: move 55s linear infinite;
 }
+
 .circle-3 {
   position: fixed;
   top: 90%;
@@ -216,6 +218,7 @@ nav a:hover {
 .hero a:hover {
   color: var(--primary);
 }
+
 .hero a:focus {
   color: var(--primary);
   text-decoration: underline;
@@ -230,6 +233,10 @@ nav a:hover {
 .project-buttons button:focus {
   color: var(--primary);
   border-color: var(--primary);
+}
+
+.theme-buttons {
+  border: none;
 }
 
 .theme-buttons button:hover {
@@ -251,6 +258,7 @@ nav a:hover {
   opacity: 0.7;
   cursor: pointer;
 }
+
 .card a:hover {
   color: var(--text);
   cursor: pointer;
@@ -352,6 +360,7 @@ i {
   padding: 0.75rem 0.2rem;
   border-bottom: 1px solid var(--text);
 }
+
 .card a {
   color: var(--primary);
   font-family: var(--body);
@@ -378,6 +387,7 @@ i {
   background-color: var(--background);
   z-index: 1000;
 }
+
 .descriptions p {
   font-family: var(--body);
   font-weight: 500;
@@ -427,6 +437,7 @@ i {
   nav ul {
     padding: 1rem;
   }
+
   nav a {
     font-size: 2rem;
   }
@@ -463,6 +474,7 @@ i {
     border-radius: 12px;
   }
 }
+
 /* 
 @media (max-width: 800px) and (orientation: landscape) {
   .about p {
@@ -485,6 +497,7 @@ i {
 } */
 
 @media (max-width: 500px) {
+
   .circle-1,
   .circle-2,
   .circle-2 {
@@ -495,9 +508,11 @@ i {
     font-size: 0.8rem;
     margin: 0.2rem;
   }
+
   .intro {
     max-width: min-content;
   }
+
   .slash {
     display: none;
   }
@@ -545,10 +560,12 @@ i {
 }
 
 @keyframes blink {
+
   0%,
   100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0;
   }
@@ -563,6 +580,7 @@ i {
     opacity: 1;
   }
 }
+
 @keyframes move {
   0% {
     transform: translateX(0) translateY(-6rem) rotate(0deg);
