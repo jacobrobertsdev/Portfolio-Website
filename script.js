@@ -1,12 +1,12 @@
 const homeLink = document.querySelector("#home-link");
 const aboutLink = document.querySelector("#about-link");
 const projectsLink = document.querySelector("#projects-link");
+const contactLink = document.querySelector("#contact-link");
 const projectsSlide = document.querySelector(".projects");
 const heroSlide = document.querySelector(".hero");
 const aboutSlide = document.querySelector(".about");
-const emailLink = document.querySelector(".email-address-link");
-const frontEnd = document.querySelector("#front-end-text");
-const email = document.querySelector("#email-text");
+const contactSlide = document.querySelector(".contact");
+const contactForm = document.querySelector(".contact-form");
 const projectButtonOne = document.querySelector(".first-project");
 const projectButtonTwo = document.querySelector(".second-project");
 const projectButtonThree = document.querySelector(".third-project");
@@ -18,30 +18,27 @@ const themeTwo = document.querySelector(".theme-two");
 const themeThree = document.querySelector(".theme-three");
 const root = document.documentElement;
 
+
+// Fetch GitHub profile photo on initial load
+fetch('https://api.github.com/users/jacobrobertsdev')
+  .then(response => response.json())
+  .then(data => {
+    const profilePic = document.querySelector('#github-profile-pic');
+    profilePic.src = data.avatar_url;
+    profilePic.classList.remove("hidden");
+  })
+  .catch(error => {
+    console.error('Error fetching GitHub profile picture:', error);
+  });
+
 //---Pages---//
 function showSlide(slideToShow) {
   heroSlide.classList.add("hidden");
   projectsSlide.classList.add("hidden");
   aboutSlide.classList.add("hidden");
+  contactSlide.classList.add("hidden");
   slideToShow.classList.remove("hidden");
 }
-
-homeLink.addEventListener("click", function () {
-  showSlide(heroSlide);
-});
-
-aboutLink.addEventListener("click", function () {
-  showSlide(aboutSlide);
-});
-
-projectsLink.addEventListener("click", function () {
-  showSlide(projectsSlide);
-});
-
-emailLink.addEventListener("click", function () {
-  frontEnd.classList.toggle("hidden");
-  email.classList.toggle("hidden");
-});
 
 //---Projects---//
 function showProject(projectToShow) {
@@ -58,6 +55,7 @@ projectButtonOne.addEventListener("click", function () {
 projectButtonTwo.addEventListener("click", function () {
   showProject(projectTwo);
 });
+
 projectButtonThree.addEventListener("click", function () {
   showProject(projectThree);
 });
@@ -82,40 +80,40 @@ themeThree.addEventListener("click", function () {
 });
 
 //---Project Descriptions---//
-function showDescription(num, func) {
-  document
-    .querySelector(`.description-link--${num}`)
-    .addEventListener("click", () => {
-      document.querySelector(`.description--${num}`).classList.toggle("hidden");
-      document.querySelector(".close-button").classList.toggle("hidden");
-    });
-}
+function setupDescription(num) {
+  const descriptionLink = document.querySelector(`.description-link--${num}`);
+  const description = document.querySelector(`.description--${num}`);
+  const closeButton = document.querySelector(".close-button");
+  const closeButtonLink = document.querySelector(".close-button-link");
 
-function close(num) {
-  document
-    .querySelector(".close-button-link")
-    .addEventListener("click", (event) => {
-      document.querySelector(`.description--${num}`).classList.add("hidden");
-      document.querySelector(".close-button").classList.add("hidden");
+  // Show/hide description on link click
+  descriptionLink.addEventListener("click", (event) => {
+    event.preventDefault(); // Prevent default anchor behavior
+    description.classList.toggle("hidden");
+    closeButton.classList.toggle("hidden");
+  });
+
+  // Close description on close button click
+  closeButtonLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    description.classList.add("hidden");
+    closeButton.classList.add("hidden");
+  });
+
+  // Close description on close button keypress (e.g., Enter or Space)
+  closeButtonLink.addEventListener("keypress", (event) => {
+    if (event.key === "Enter" || event.key === "Escape") {
       event.preventDefault();
-    });
-
-  document
-    .querySelector(".close-button-link")
-    .addEventListener("keypress", () => {
-      document.querySelector(`.description--${num}`).classList.add("hidden");
-      document.querySelector(".close-button").classList.add("hidden");
-    });
-
-  document.addEventListener("keypress", () => {
-    document.querySelector(`.description--${num}`).classList.add("hidden");
-    document.querySelector(".close-button").classList.add("hidden");
+      description.classList.add("hidden");
+      closeButton.classList.add("hidden");
+    }
   });
 }
 
-showDescription(1, close(1));
-showDescription(2, close(2));
-showDescription(3, close(3));
+// Set up descriptions for each project
+setupDescription(1);
+setupDescription(2);
+setupDescription(3);
 
 //---Navigation / Routing---//
 function navigateToHash() {
@@ -125,29 +123,66 @@ function navigateToHash() {
     showSlide(aboutSlide);
   } else if (hash === "projects") {
     showSlide(projectsSlide);
+  } else if (hash === "contact") {
+    showSlide(contactSlide);
   } else {
-    // Add more conditions for other sections/pages
     showSlide(heroSlide);
   }
 }
 navigateToHash();
 
-homeLink.addEventListener("click", function () {
+homeLink.addEventListener("click", function (event) {
+  event.preventDefault(); // Prevent default anchor behavior
   showSlide(heroSlide);
   history.pushState(null, null, "#home");
 });
 
-aboutLink.addEventListener("click", function () {
+aboutLink.addEventListener("click", function (event) {
+  event.preventDefault();
   showSlide(aboutSlide);
   history.pushState(null, null, "#about");
 });
 
-projectsLink.addEventListener("click", function () {
+projectsLink.addEventListener("click", function (event) {
+  event.preventDefault();
   showSlide(projectsSlide);
   history.pushState(null, null, "#projects");
 });
 
-// Event listener for popstate to handle back/forward buttons
-window.addEventListener("popstate", function (event) {
+contactLink.addEventListener("click", function (event) {
+  event.preventDefault();
+  showSlide(contactSlide);
+  history.pushState(null, null, "#contact");
+});
+
+contactForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+  const formData = new FormData(contactForm);
+
+  fetch('https://formspree.io/f/xvgarlnn', {
+    method: 'POST',
+    body: formData,
+    headers: {
+      'Accept': 'application/json'
+    }
+  })
+    .then(response => {
+      if (response.ok) {
+        alert("Message sent successfully!");
+        contactForm.reset();
+        window.location.href = "#home";
+        navigateToHash();
+      } else {
+        alert("There was an error submitting the form. Please try again.");
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert("There was an error submitting the form. Please try again.");
+    });
+});
+
+// Event listener for popstate to handle back/forward navigation
+window.addEventListener("popstate", function () {
   navigateToHash();
 });

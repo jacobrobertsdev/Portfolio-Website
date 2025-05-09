@@ -40,10 +40,7 @@
           <p class="front-end">
             <span id="front-end-text" class="">
               <span class="slash">///</span>
-              Front-End Developer
-            </span>
-            <span id="email-text" class="hidden">
-              jacobroberts.dev@gmail.com
+              Full-Stack Developer
             </span>
             <span class="blink">|</span>
           </p>
@@ -54,20 +51,21 @@
             <a href="https://www.linkedin.com/in/jacobrobertsdev" target="_blank">
               LinkedIn
             </a>
-            <a href="javascript:;" class="email-address-link">Contact</a>
+            <a href="#contact" id="contact-link">Contact</a>
           </div>
         </div>
       </section>
       <section class="about hidden" id="about">
+        <img id="github-profile-pic" class="profile-pic hidden" src="" alt="GitHub Profile Picture">
         <h2>About</h2>
         <p>
           Hi, I'm Jacob 👋. I'm a software developer based in Kentucky, USA,
-          currently pursuing a Bachelor of Science degree in Software and Data
-          Engineering at Bellarmine University. I began learning to code in
-          October 2023 after selling my small business to pursue a career in
-          software engineering. I love learning new things, and this field
-          provides endless opportunities to do so. When not studying or
-          writing code I like learning about history, playing chess, and
+          and recently graduated with a BSc in Software and Data
+          Engineering from Bellarmine University. I began learning to code in
+          October 2023, and decided to sell my small business to pursue a career in
+          software engineering. I enjoy learning new things and solving problems, and this field
+          provides endless opportunities to do so. When not writing code I like learning about history, playing chess,
+          and
           spending time with family. Thanks for visiting!
         </p>
       </section>
@@ -83,43 +81,70 @@
             <div class="project-info">
               <h4>
                 <span class="slashes">///</span>
-                01 - Assignment Tracker
+                01 - Social Media REST API
               </h4>
               <a href="javascript:;" class="description-link--1">Info</a>
             </div>
-            <a href="https://assignment-tracker-iota.vercel.app/" target="_blank">
-              <img src="images/assignment-tracker-screenshot.png" alt="Assignment Tracker Website"
-                class="portfolio-site">
-            </a>
+            <div class="image-container"><a
+                href="https://github.com/fasttrackd-student-work/spring-assessment-social-media-april-2025-team-2"
+                target="_blank"><img src="images/api-screenshot.png" alt="REST API"></a>
+            </div>
           </div>
           <div class="card card-two hidden">
             <div class="project-info">
               <h4>
                 <span class="slashes">///</span>
-                02 - Notes Application
+                02 - Assignment Tracker
               </h4>
               <a href="javascript:;" class="description-link--2">Info</a>
             </div>
-            <a href="https://jacobrobertsdev.github.io/notes-app/" target="_blank">
-              <img src="images/notes-screenshot.png" alt="Notes Website" class="portfolio-site">
-            </a>
+            <div class="image-container">
+              <a href="https://assignment-tracker-iota.vercel.app/" target="_blank">
+                <img src="images/assignment-tracker-screenshot.png" alt="Assignment Tracker Website">
+              </a>
+            </div>
           </div>
           <div class="card card-three hidden">
             <div class="project-info">
               <h4>
                 <span class="slashes">///</span>
-                03 - Portfolio site V1
+                03 - Notes Application
               </h4>
               <a href="javascript:;" class="description-link--3">Info</a>
             </div>
-            <img src="images/portfolio-screenshot.png" alt="portfolio example" class="portfolio-site">
+            <div class="image-container">
+              <a href="https://jacobrobertsdev.github.io/notes-app/" target="_blank">
+                <img src="images/notes-screenshot.png" alt="Notes Website">
+              </a>
+            </div>
           </div>
         </div>
       </section>
+      <section class="contact hidden" id="contact">
+        <h2>Contact</h2>
+        <form class="contact-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </section>
       <div class="close-button hidden">
-        <a class="close-button-link" tabindex="0">&times;</a>
+        <a class="close-button-link" tabindex="0">×</a>
       </div>
       <div class="descriptions description--1 hidden">
+        <p>
+          A mock social media REST API/web serivce with 30 endpoints providing full CRUD functionality on Tweets, Users,
+          Tags, Mentions, and Followers. Built with Java, Spring Boot, Maven, and PostgreSQL. View the Github repository
+          <a href="https://github.com/fasttrackd-student-work/spring-assessment-social-media-april-2025-team-2"
+            target="_blank">
+            here</a>.
+        </p>
+      </div>
+      <div class="descriptions description--2 hidden">
         <p>
           An application for tracking school assignments with courses, due
           dates, and assignment descriptions. Users can create, read, update,
@@ -127,33 +152,17 @@
           date and time. Built with Vue.js, Vite, and the Web Storage API.
           View the Github repository
           <a href="https://github.com/jacobrobertsdev/assignment-tracker" target="_blank">
-            here
-          </a>
-          .
+            here</a>.
         </p>
       </div>
-      <div class="descriptions description--2 hidden">
+      <div class="descriptions description--3 hidden">
         <p>
           An application for efficiently taking notes and viewing them in a
           grid format. Create, read, update, delete, and filter notes. Built
           mobile-first with HTML, CSS, Javascript, and the Web Storage API.
           View the Github repository
           <a href="https://github.com/jacobrobertsdev/notes-app" target="_blank">
-            here
-          </a>
-          .
-        </p>
-      </div>
-      <div class="descriptions description--3 hidden">
-        <p>
-          The first version of my portfolio website. The site functions as a
-          single-page application with dynamically-rendered content,
-          animations, and three different theme options. View the Github
-          repository
-          <a href="https://github.com/jacobrobertsdev/portfolio-website" target="_blank">
-            here
-          </a>
-          .
+            here</a>.
         </p>
       </div>
       <div class="theme-buttons">
