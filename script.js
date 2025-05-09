@@ -129,7 +129,6 @@ function navigateToHash() {
     showSlide(heroSlide);
   }
 }
-navigateToHash();
 
 homeLink.addEventListener("click", function (event) {
   event.preventDefault(); // Prevent default anchor behavior
