@@ -27,7 +27,7 @@ async function typeBio(message) {
   bio.textContent = "";
   for (let char of message) {
     bio.textContent += char;
-    await new Promise(resolve => setTimeout(resolve, 150)); // 50ms delay per character
+    await new Promise(resolve => setTimeout(resolve, 130));
   }
 }
 
