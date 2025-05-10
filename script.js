@@ -1,21 +1,11 @@
-const homeLink = document.querySelector("#home-link");
-const aboutLink = document.querySelector("#about-link");
-const projectsLink = document.querySelector("#projects-link");
-const contactLink = document.querySelector("#contact-link");
 const projectsSlide = document.querySelector(".projects");
 const heroSlide = document.querySelector(".hero");
 const aboutSlide = document.querySelector(".about");
 const contactSlide = document.querySelector(".contact");
 const contactForm = document.querySelector(".contact-form");
-const projectButtonOne = document.querySelector(".first-project");
-const projectButtonTwo = document.querySelector(".second-project");
-const projectButtonThree = document.querySelector(".third-project");
 const projectOne = document.querySelector(".card-one");
 const projectTwo = document.querySelector(".card-two");
 const projectThree = document.querySelector(".card-three");
-const themeOne = document.querySelector(".theme-one");
-const themeTwo = document.querySelector(".theme-two");
-const themeThree = document.querySelector(".theme-three");
 const root = document.documentElement;
 
 
@@ -48,15 +38,15 @@ function showProject(projectToShow) {
   projectToShow.classList.remove("hidden");
 }
 
-projectButtonOne.addEventListener("click", function () {
+document.querySelector(".first-project").addEventListener("click", function () {
   showProject(projectOne);
 });
 
-projectButtonTwo.addEventListener("click", function () {
+document.querySelector(".second-project").addEventListener("click", function () {
   showProject(projectTwo);
 });
 
-projectButtonThree.addEventListener("click", function () {
+document.querySelector(".third-project").addEventListener("click", function () {
   showProject(projectThree);
 });
 
@@ -67,15 +57,15 @@ function setTheme(textColor, backgroundColor, primaryColor) {
   root.style.setProperty("--primary", primaryColor);
 }
 
-themeOne.addEventListener("click", function () {
+document.querySelector(".theme-one").addEventListener("click", function () {
   setTheme("#f3f7f3", "#112A42", "#1ee6d5");
 });
 
-themeTwo.addEventListener("click", function () {
+document.querySelector(".theme-two").addEventListener("click", function () {
   setTheme("#050605", "#EFF1EE", "#E4290C");
 });
 
-themeThree.addEventListener("click", function () {
+document.querySelector(".theme-three").addEventListener("click", function () {
   setTheme("#FDFCFD", "#18101E", "#7C519E");
 });
 
@@ -130,25 +120,25 @@ function navigateToHash() {
   }
 }
 
-homeLink.addEventListener("click", function (event) {
+document.querySelector("#home-link").addEventListener("click", function (event) {
   event.preventDefault(); // Prevent default anchor behavior
   showSlide(heroSlide);
   history.pushState(null, null, "#home");
 });
 
-aboutLink.addEventListener("click", function (event) {
+document.querySelector("#about-link").addEventListener("click", function (event) {
   event.preventDefault();
   showSlide(aboutSlide);
   history.pushState(null, null, "#about");
 });
 
-projectsLink.addEventListener("click", function (event) {
+document.querySelector("#projects-link").addEventListener("click", function (event) {
   event.preventDefault();
   showSlide(projectsSlide);
   history.pushState(null, null, "#projects");
 });
 
-contactLink.addEventListener("click", function (event) {
+document.querySelector("#contact-link").addEventListener("click", function (event) {
   event.preventDefault();
   showSlide(contactSlide);
   history.pushState(null, null, "#contact");
