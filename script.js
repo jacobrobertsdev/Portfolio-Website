@@ -9,17 +9,27 @@ const projectThree = document.querySelector(".card-three");
 const root = document.documentElement;
 
 
-// Fetch GitHub profile photo on initial load
+// Fetch GitHub profile data on initial load
 fetch('https://api.github.com/users/jacobrobertsdev')
   .then(response => response.json())
   .then(data => {
     const profilePic = document.querySelector('#github-profile-pic');
     profilePic.src = data.avatar_url;
     profilePic.classList.remove("hidden");
+    typeBio(data.bio);
   })
   .catch(error => {
     console.error('Error fetching GitHub profile picture:', error);
   });
+
+async function typeBio(message) {
+  let bio = document.querySelector(".github-bio");
+  bio.textContent = "";
+  for (let char of message) {
+    bio.textContent += char;
+    await new Promise(resolve => setTimeout(resolve, 150)); // 50ms delay per character
+  }
+}
 
 //---Pages---//
 function showSlide(slideToShow) {
