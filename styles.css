@@ -172,7 +172,7 @@ nav a {
   font-weight: 700;
 }
 
-.front-end {
+.intro-blurb {
   font-family: var(--body);
   color: var(--primary);
   font-weight: bold;
@@ -203,8 +203,8 @@ nav a {
 }
 
 .profile-pic {
-  width: 7rem;
-  height: 7rem;
+  width: 6rem;
+  height: 6rem;
   border-radius: 50%;
   margin-bottom: 1rem;
 }
@@ -569,16 +569,12 @@ i:hover {
     max-width: min-content;
   }
 
-  .slash {
-    display: none;
-  }
-
   .about p {
     max-width: 95%;
     font-size: 0.9rem;
   }
 
-  .front-end {
+  .intro-blurb {
     font-size: 1rem;
   }
 
@@ -603,9 +599,6 @@ i:hover {
 }
 
 @media (max-width: 425px) {
-  .slashes {
-    display: none;
-  }
 
   .project-cards p {
     font-size: 0.5rem;
