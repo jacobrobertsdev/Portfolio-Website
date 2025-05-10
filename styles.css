@@ -562,7 +562,9 @@ i:hover {
   }
 
   .profile-pic {
-    display: none;
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 0.5rem;
   }
 
   .intro {
@@ -599,7 +601,6 @@ i:hover {
 }
 
 @media (max-width: 425px) {
-
   .project-cards p {
     font-size: 0.5rem;
   }
@@ -614,6 +615,93 @@ i:hover {
 
   .hero-links {
     flex-direction: column;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 925px) {
+  .profile-pic {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .about p {
+    font-size: 0.8rem;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+
+  .about h2,
+  .projects h2,
+  .contact h2 {
+    font-size: 0.8rem;
+    font-family: var(--heading);
+    letter-spacing: 0.1rem;
+    color: var(--primary);
+    margin: 0 0 0.5rem 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .card {
+    height: 50vh;
+  }
+
+  .project-buttons button {
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    padding: 0.75rem;
+  }
+
+  .project-cards {
+    max-width: 100%;
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .contact-form {
+    width: 12rem;
+  }
+
+  .contact-form label {
+    margin-bottom: 0.25rem;
+    font-size: 0.8rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    margin-bottom: 0.5rem;
+    padding: 0.3rem;
+  }
+
+  .contact-form textarea {
+    height: 3rem;
+    resize: none;
+  }
+
+  .contact-form button {
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--text);
+    border-radius: 0.3125rem;
+    background-color: transparent;
+    color: var(--text);
+    font-family: var(--body);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .contact-form button:hover {
+    color: var(--primary);
+    border-color: var(--primary);
   }
 }
 
