@@ -590,13 +590,6 @@ i:hover {
     font-size: 1rem;
   }
 
-  .hero,
-  .about,
-  .projects,
-  .contact {
-    padding-bottom: 6rem;
-  }
-
   .contact-form {
     width: 12rem;
 
@@ -621,7 +614,7 @@ i:hover {
   }
 
   h2 {
-    font-size: 1.2rem;
+    font-size: .8rem;
   }
 
   .profile-pic {
