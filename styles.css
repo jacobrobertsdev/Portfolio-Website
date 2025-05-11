@@ -630,6 +630,10 @@ i:hover {
   .hero-links {
     flex-direction: column;
   }
+
+  .intro-blurb {
+    font-size: .8rem;
+  }
 }
 
 @media (orientation: landscape) and (max-width: 925px) {
