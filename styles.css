@@ -10,7 +10,7 @@
 
 body {
   background-color: var(--background);
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -122,6 +122,7 @@ nav a {
   align-items: center;
   justify-content: center;
   max-height: 100vh;
+  overflow: hidden;
 }
 
 .hero,
