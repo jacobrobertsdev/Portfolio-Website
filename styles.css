@@ -624,6 +624,10 @@ i:hover {
     font-size: 1.2rem;
   }
 
+  .profile-pic {
+    display: none;
+  }
+
   .project-cards h4 {
     font-size: 0.8rem;
   }
